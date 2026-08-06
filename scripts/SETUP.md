@@ -1,0 +1,40 @@
+# Pipeline setup (one-time)
+
+## Already done (2026-08-05)
+
+- `py -m pip install selenium markdownify requests` (Selenium ≥4.6 auto-manages geckodriver)
+- `scripts/readability.js` vendored from mozilla/readability
+- Chatterbox TTS Server verified at `http://localhost:8090/` (OpenAI-compatible `/v1/audio/speech`)
+
+## You: create the Firefox automation profile
+
+1. In Firefox, open `about:profiles` → **Create a New Profile** → name it `news-automation`.
+2. Launch it ("Launch profile in new browser"), then in that window:
+   - install the content-access extension you use for FT (and log in to ft.com if you have an account);
+   - open https://www.ft.com/artificial-intelligence once and confirm an article is fully readable.
+3. Back in `about:profiles`, copy the profile's **Root Directory** path and paste it into
+   `scripts/config.json` → `"firefox_profile"` (use forward slashes or doubled backslashes).
+
+Note: the daily run launches Firefox with this profile, so it must not already be open
+in another Firefox window when the script runs (your main browsing profile is unaffected).
+
+## Podcast voices (chosen 2026-08-05)
+
+Host A = `ResNene.wav` (energetic, enthusiastic — the anchor), host B = `Bee.wav` (calmer — analysis).
+Both female; scripts are written with sarcastic streaks for both. To change voices later, edit
+`tts.hosts.A.voice` / `tts.hosts.B.voice` in `config.json` (voice **filenames** from the
+Chatterbox UI at http://localhost:8090/). The `seed` values keep each host's delivery consistent
+across chunks — leave them.
+
+## Daily pipeline (what the routine will run)
+
+1. `py scripts/fetch_articles.py` — new FT articles → `raw/`
+2. Claude: Ingest workflow (source/entity/storyline pages, digest)
+3. Claude: Podcast workflow → `podcast/YYYY-MM-DD script.md`
+4. `py scripts/make_audio.py "podcast/YYYY-MM-DD script.md"` → `podcast/YYYY-MM-DD.mp3`
+
+## Testing commands
+
+- `py scripts/fetch_articles.py --dry-run` — list new article links only
+- `py scripts/fetch_articles.py --limit 3` — small test batch
+- `py scripts/make_audio.py <script.md>` — resumable; re-run after a crash and it continues

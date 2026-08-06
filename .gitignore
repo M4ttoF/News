@@ -1,0 +1,19 @@
+# Runtime state (dedupe DB, resumable TTS chunk cache)
+scripts/state/
+
+# Generated audio (~40 MB/episode; scripts stay versioned, re-renderable anytime)
+podcast/*.mp3
+
+# Obsidian per-machine state (keep vault settings, ignore session/UI state)
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache/
+
+# Python
+__pycache__/
+*.pyc
+
+# OS noise
+Thumbs.db
+desktop.ini
+.DS_Store

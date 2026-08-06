@@ -1,0 +1,44 @@
+{
+  "vault": "E:/ObsidianVaults/News",
+  "raw_dir": "raw",
+  "firefox_binary": "C:/Program Files/Mozilla Firefox/firefox.exe",
+  "firefox_profile": "C:/Users/eziob/AppData/Roaming/Mozilla/Firefox/Profiles/7fk6axc9.news-automations",
+  "headless": false,
+  "index_load_wait_s": 10,
+  "article_timeout_s": 40,
+  "article_delay_s": 20,
+  "min_article_chars": 500,
+  "max_fetch_attempts": 5,
+  "strip_line_patterns": [
+    "^Unlock the Editor.s Digest for free$",
+    "^Roula Khalaf, Editor of the FT, selects her favourite stories.*$",
+    "^This article is an on-site version of.*newsletter.*$"
+  ],
+  "paywall_markers": [
+    "Subscribe to unlock this article",
+    "Try unlimited access",
+    "Explore more offers",
+    "Complete digital access to quality FT journalism",
+    "Try for full article text"
+  ],
+  "sources": [
+    {
+      "name": "FT Artificial Intelligence",
+      "outlet": "Financial Times",
+      "base_url": "https://www.ft.com",
+      "index_url": "https://www.ft.com/artificial-intelligence",
+      "href_pattern": "^/content/",
+      "link_scope_selector": "#stream .o-teaser__heading"
+    }
+  ],
+  "tts": {
+    "base_url": "http://localhost:8090",
+    "model": "chatterbox",
+    "speed": 1.0,
+    "max_chunk_chars": 1500,
+    "hosts": {
+      "A": { "voice": "ResNene.wav", "seed": 1111 },
+      "B": { "voice": "Bee.wav", "seed": 2222 }
+    }
+  }
+}
