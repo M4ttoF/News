@@ -41,7 +41,7 @@ The design follows the "LLM wiki" pattern: instead of RAG-ing raw documents on e
 
 One-time steps (details in `scripts/SETUP.md`):
 
-1. `py -m pip install selenium markdownify requests` (Python 3.10+; Selenium ≥ 4.6 auto-manages geckodriver). ffmpeg on PATH.
+1. [uv](https://docs.astral.sh/uv/) installed, then `uv sync` in the vault root (creates `.venv/` with Python 3.12 and all dependencies from `pyproject.toml`/`uv.lock`; Selenium ≥ 4.6 auto-manages geckodriver). ffmpeg on PATH.
 2. Create a dedicated Firefox profile (`about:profiles` → `news-automation`), install your content-access extensions in it, and put its root directory path in `config.json` → `firefox_profile`.
 3. Run a [Chatterbox TTS Server](https://github.com/devnen/Chatterbox-TTS-Server) locally (default expected at `http://localhost:8090`); pick two predefined voices in `config.json`.
 4. Point Obsidian Web Clipper at `raw/` for manual clipping alongside the automated fetch.
@@ -49,11 +49,11 @@ One-time steps (details in `scripts/SETUP.md`):
 ## Daily flow
 
 ```
-py scripts/fetch_articles.py                      # new articles -> raw/
+uv run scripts/fetch_articles.py                  # new articles -> raw/
 # Claude Code: "ingest"                           # raw/ -> wiki pages + digest
 # (rate new sources 1-5 in Obsidian)              # trains future auto-relevance
 # Claude Code: "podcast"                          # wiki -> podcast/YYYY-MM-DD script.md
-py scripts/make_audio.py "podcast/<date> script.md"   # script -> mp3
+uv run scripts/make_audio.py "podcast/<date> script.md"   # script -> mp3
 ```
 
 The manual ratings are training data: once enough accumulate, ingest will add a `relevance_pred:` prediction per source and manual rating can retire. A scheduled Claude Code job wiring the whole sequence into one unattended morning run is the planned next step (see CLAUDE.md → Planned).

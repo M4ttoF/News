@@ -6,10 +6,10 @@ content with Mozilla Readability, and writes clipper-style markdown files
 into raw/. Dedupes across runs via state/seen.json.
 
 Usage:
-  py scripts/fetch_articles.py              # normal daily run
-  py scripts/fetch_articles.py --dry-run    # list new article links, fetch nothing
-  py scripts/fetch_articles.py --limit 3    # attempt at most 3 articles (testing)
-  py scripts/fetch_articles.py --headless   # force headless regardless of config
+  uv run scripts/fetch_articles.py              # normal daily run
+  uv run scripts/fetch_articles.py --dry-run    # list new article links, fetch nothing
+  uv run scripts/fetch_articles.py --limit 3    # attempt at most 3 articles (testing)
+  uv run scripts/fetch_articles.py --headless   # force headless regardless of config
 """
 
 import argparse

@@ -67,7 +67,7 @@ On request (and later daily): produce a two-host commute podcast from recent sou
    - `---` between segments; no headings inside dialogue (they'd be read aloud); spell out numbers/abbreviations as speech ("forty-five billion dollars", not "$45bn").
    - Target 8,000–14,000 words ≈ 45–90 min of audio.
    - Structure: cold open + headline rundown → one deep segment per major story → quick hits → sign-off.
-4. Run `py scripts/make_audio.py "podcast/YYYY-MM-DD script.md"` → `podcast/YYYY-MM-DD.mp3`. The script embeds `podcast/thumbnail.png` as cover art and tags the mp3 `title: Drive Podcast N` / `album: Drive Podcast` / `artist: Resnene & Bee` (N = the script's position among all `* script.md` files by date — don't rename or delete old scripts or numbering shifts). Log a `podcast` entry (add `podcast` to the log ops).
+4. Run `uv run scripts/make_audio.py "podcast/YYYY-MM-DD script.md"` → `podcast/YYYY-MM-DD.mp3`. The script embeds `podcast/thumbnail.png` as cover art and tags the mp3 `title: Drive Podcast N` / `album: Drive Podcast` / `artist: Resnene & Bee` (N = the script's position among all `* script.md` files by date — don't rename or delete old scripts or numbering shifts). Log a `podcast` entry (add `podcast` to the log ops).
 
 ## Pipeline scripts
 

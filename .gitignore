@@ -17,3 +17,6 @@ __pycache__/
 Thumbs.db
 desktop.ini
 .DS_Store
+
+# uv virtual environment
+.venv/

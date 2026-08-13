@@ -2,7 +2,7 @@
 
 ## Already done (2026-08-05)
 
-- `py -m pip install selenium markdownify requests` (Selenium ≥4.6 auto-manages geckodriver)
+- Python env: uv project at the vault root (`pyproject.toml` + `uv.lock`, Python 3.12 pinned in `.python-version`; set up 2026-08-11 — replaces the earlier system-Python `pip install`). Recreate anytime with `uv sync`; deps: selenium, markdownify, requests (Selenium ≥4.6 auto-manages geckodriver)
 - `scripts/readability.js` vendored from mozilla/readability
 - Chatterbox TTS Server verified at `http://localhost:8090/` (OpenAI-compatible `/v1/audio/speech`)
 
@@ -28,13 +28,13 @@ across chunks — leave them.
 
 ## Daily pipeline (what the routine will run)
 
-1. `py scripts/fetch_articles.py` — new FT articles → `raw/`
+1. `uv run scripts/fetch_articles.py` — new FT articles → `raw/`
 2. Claude: Ingest workflow (source/entity/storyline pages, digest)
 3. Claude: Podcast workflow → `podcast/YYYY-MM-DD script.md`
-4. `py scripts/make_audio.py "podcast/YYYY-MM-DD script.md"` → `podcast/YYYY-MM-DD.mp3`
+4. `uv run scripts/make_audio.py "podcast/YYYY-MM-DD script.md"` → `podcast/YYYY-MM-DD.mp3`
 
 ## Testing commands
 
-- `py scripts/fetch_articles.py --dry-run` — list new article links only
-- `py scripts/fetch_articles.py --limit 3` — small test batch
-- `py scripts/make_audio.py <script.md>` — resumable; re-run after a crash and it continues
+- `uv run scripts/fetch_articles.py --dry-run` — list new article links only
+- `uv run scripts/fetch_articles.py --limit 3` — small test batch
+- `uv run scripts/make_audio.py <script.md>` — resumable; re-run after a crash and it continues

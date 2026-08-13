@@ -5,8 +5,8 @@ Script format (see CLAUDE.md "Podcast" workflow): dialogue lines tagged
 `---` lines and YAML frontmatter are ignored.
 
 Usage:
-  py scripts/make_audio.py "podcast/2026-08-05 script.md"
-  py scripts/make_audio.py "podcast/2026-08-05 script.md" --out "podcast/2026-08-05.mp3"
+  uv run scripts/make_audio.py "podcast/2026-08-05 script.md"
+  uv run scripts/make_audio.py "podcast/2026-08-05 script.md" --out "podcast/2026-08-05.mp3"
 
 Chunks are cached in state/audio_cache/<script name>/ so an interrupted run
 resumes where it left off; the cache is deleted after a successful render.
