@@ -62,12 +62,12 @@ On request (and later daily): produce a two-host commute podcast from recent sou
 
 1. Select sources: today's (or since the last `podcast` log entry) with `relevance:` ≥ 3; while ratings are sparse, use all recent sources.
 2. Pull in the affected storyline/entity pages — the wiki context is what makes segments richer than single-article summaries.
-3. Write `podcast/YYYY-MM-DD script.md`. Format (parsed by `scripts/make_audio.py`):
+3. Write `podcast/YYYY-MM-DD script.md`. Every episode gets a real title in the script frontmatter (`title:`) — short and concrete, drawn from the episode's strongest image or line. Format (parsed by `scripts/make_audio.py`):
    - Dialogue lines tagged `A: ...` / `B: ...` — two hosts (both female voices), natural conversational register, disagreements and questions welcome. A (voice Resnene) is the anchor/driver: energetic, enthusiastic. B (voice Bee) is calmer, drier: analysis and color. Both lean on sarcasm — wry asides, deadpan skepticism about hype — without undercutting the facts.
    - `---` between segments; no headings inside dialogue (they'd be read aloud); spell out numbers/abbreviations as speech ("forty-five billion dollars", not "$45bn").
    - Target 8,000–14,000 words ≈ 45–90 min of audio.
    - Structure: cold open + headline rundown → one deep segment per major story → quick hits → sign-off.
-4. Run `uv run scripts/make_audio.py "podcast/YYYY-MM-DD script.md"` → `podcast/YYYY-MM-DD.mp3`. The script embeds `podcast/thumbnail.png` as cover art and tags the mp3 `title: Drive Podcast N` / `album: Drive Podcast` / `artist: Resnene & Bee` (N = the script's position among all `* script.md` files by date — don't rename or delete old scripts or numbering shifts). Log a `podcast` entry (add `podcast` to the log ops).
+4. Run `uv run scripts/make_audio.py "podcast/YYYY-MM-DD script.md"` → `podcast/YYYY-MM-DD.mp3`. The script embeds `podcast/thumbnail.png` as cover art and tags the mp3 `title: <frontmatter title>` (fallback `Drive Podcast N` if the script has no `title:`) / `album: Drive Podcast` / `artist: Resnene & Bee` / `track: N` (N = the script's position among all `* script.md` files by date — don't rename or delete old scripts or numbering shifts). Log a `podcast` entry (add `podcast` to the log ops). The `podcast-episode` skill carries the operational detail for the full fetch→render pipeline.
 
 ## Pipeline scripts
 

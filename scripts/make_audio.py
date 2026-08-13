@@ -105,6 +105,17 @@ def episode_number(script_path):
         return len(scripts) + 1
 
 
+def script_title(text):
+    """Episode title from the script's YAML frontmatter (`title:`), or None."""
+    if not text.startswith("---"):
+        return None
+    end = text.find("\n---", 3)
+    if end == -1:
+        return None
+    m = re.search(r"^title:\s*[\"']?(.+?)[\"']?\s*$", text[3:end], re.M)
+    return m.group(1) if m else None
+
+
 def probe_duration(path):
     out = subprocess.run(
         ["ffprobe", "-v", "quiet", "-show_entries", "format=duration",
@@ -135,7 +146,8 @@ def main():
         stem = m.group(1) if m else script_path.stem
         out_path = script_path.parent / f"{stem}.mp3"
 
-    turns = parse_dialogue(script_path.read_text(encoding="utf-8"))
+    script_text = script_path.read_text(encoding="utf-8")
+    turns = parse_dialogue(script_text)
     if not turns:
         sys.exit("no dialogue turns found (expected lines starting with 'A:' or 'B:')")
 
@@ -164,7 +176,8 @@ def main():
         encoding="utf-8")
     out_path.parent.mkdir(parents=True, exist_ok=True)
     n = episode_number(script_path)
-    title = f"Drive Podcast {n}"
+    # Episode title from script frontmatter; the number lives on as the track tag.
+    title = script_title(script_text) or f"Drive Podcast {n}"
     m = re.match(r"(\d{4})-\d{2}-\d{2}", script_path.stem)
     cmd = ["ffmpeg", "-y", "-v", "error", "-f", "concat", "-safe", "0",
            "-i", str(list_file)]
