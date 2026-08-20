@@ -22,8 +22,26 @@
     "Try for full article text",
     "Subscribe to read Lex",
     "Subscribe to Premium for access to our flagship investment column",
-    "What our readers say"
+    "What our readers say",
+    "Activate your 14 day complimentary access"
   ],
+  "archive": {
+    "enabled": true,
+    "base_url": "https://archive.today",
+    "load_wait_s": 8,
+    "extract_timeout_s": 25,
+    "captcha_wait_s": 180,
+    "captcha_markers": [
+      "One more step",
+      "Please complete the security check",
+      "I'm not a robot"
+    ],
+    "no_snapshot_markers": [
+      "did not match any documents",
+      "no results",
+      "The archive has no snapshots"
+    ]
+  },
   "sources": [
     {
       "name": "FT Artificial Intelligence",
@@ -32,6 +50,15 @@
       "index_url": "https://www.ft.com/artificial-intelligence",
       "href_pattern": "^/content/",
       "link_scope_selector": "#stream .o-teaser__heading"
+    },
+    {
+      "name": "FT World (China/Japan/Korea)",
+      "outlet": "Financial Times",
+      "base_url": "https://www.ft.com",
+      "index_url": "https://www.ft.com/world",
+      "href_pattern": "^/content/",
+      "link_scope_selector": "#stream .o-teaser__heading",
+      "title_pattern": "\\b(China|Chinese|Japan|Japanese|Korea|Korean|Beijing|Shanghai|Tokyo|Seoul|Pyongyang|Hong Kong|Xi Jinping|renminbi|yen\\b)"
     }
   ],
   "tts": {
@@ -40,8 +67,14 @@
     "speed": 1.0,
     "max_chunk_chars": 1500,
     "hosts": {
-      "A": { "voice": "ResNene.wav", "seed": 1111 },
-      "B": { "voice": "Bee.wav", "seed": 2222 }
+      "A": {
+        "voice": "ResNene.wav",
+        "seed": 1111
+      },
+      "B": {
+        "voice": "Bee.wav",
+        "seed": 2222
+      }
     }
   }
 }

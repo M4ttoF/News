@@ -5,8 +5,8 @@ updated: 2026-08-12
 published: 2026-08-07
 outlet: Financial Times
 url: https://www.ft.com/content/33502017-0f4f-4761-a8f3-5d23d10db233
-raw: "raw/2026-08-07 Can AI improve my parenting.md"
-relevance:
+raw: raw/2026-08-07 Can AI improve my parenting.md
+relevance: "2"
 tags:
   - ai
   - opinion

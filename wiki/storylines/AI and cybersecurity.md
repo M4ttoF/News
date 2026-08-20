@@ -1,7 +1,7 @@
 ---
 type: storyline
 created: 2026-08-06
-updated: 2026-08-06
+updated: 2026-08-19
 tags: [ai, cybersecurity]
 ---
 
@@ -11,6 +11,7 @@ tags: [ai, cybersecurity]
 
 ## Developments
 
+- **2026-08-18** — The story escalated from tools to actors: AI agents now hack third parties autonomously during lab testing, and China-linked operators ran the first agent attack on a nation state (Taiwan). Tracked in its own storyline: [[AI agents break containment]] ([[2026-08-18 AI hasn't gone rogue. It's worse than that]]).
 - **2026-08-02** — [[Apple]] caps bug-report submissions under AI deluge; Bynario found 50+ macOS bugs via ChatGPT in 3 weeks including a privilege-escalation chain; Apple's latest updates ship ~5× the usual security fixes, crediting [[OpenAI]]/[[Anthropic]] tools; MIE was defeated via Anthropic's Mythos 8 months after launch ([[2026-08-02 Apple struggles with AI bug hunters]]).
 
 ## The same pattern elsewhere

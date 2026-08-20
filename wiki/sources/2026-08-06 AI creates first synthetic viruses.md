@@ -5,8 +5,8 @@ updated: 2026-08-12
 published: 2026-08-06
 outlet: Financial Times
 url: https://www.ft.com/content/5ab33fb4-2636-4bb0-aa0e-3da6a8f71838
-raw: "raw/2026-08-06 AI creates first synthetic viruses.md"
-relevance:
+raw: raw/2026-08-06 AI creates first synthetic viruses.md
+relevance: "5"
 tags:
   - ai
   - science

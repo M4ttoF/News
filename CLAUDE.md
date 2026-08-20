@@ -63,7 +63,7 @@ On request (and later daily): produce a two-host commute podcast from recent sou
 1. Select sources: today's (or since the last `podcast` log entry) with `relevance:` ≥ 3; while ratings are sparse, use all recent sources.
 2. Pull in the affected storyline/entity pages — the wiki context is what makes segments richer than single-article summaries.
 3. Write `podcast/YYYY-MM-DD script.md`. Every episode gets a real title in the script frontmatter (`title:`) — short and concrete, drawn from the episode's strongest image or line. Format (parsed by `scripts/make_audio.py`):
-   - Dialogue lines tagged `A: ...` / `B: ...` — two hosts (both female voices), natural conversational register, disagreements and questions welcome. A (voice Resnene) is the anchor/driver: energetic, enthusiastic. B (voice Bee) is calmer, drier: analysis and color. Both lean on sarcasm — wry asides, deadpan skepticism about hype — without undercutting the facts.
+   - Dialogue lines tagged `A: ...` / `B: ...` — two hosts (both female voices), natural conversational register, disagreements and questions welcome. A is named **Nene** (voice Resnene) — whenever her name appears in dialogue text, write it **"Naynay"** so the TTS pronounces it correctly (frontmatter/metadata keep "Nene"). She is the anchor/driver: energetic, enthusiastic. B is named **Bee** (voice Bee): calmer, drier — analysis and color. Both lean on sarcasm — wry asides, deadpan skepticism about hype — without undercutting the facts.
    - `---` between segments; no headings inside dialogue (they'd be read aloud); spell out numbers/abbreviations as speech ("forty-five billion dollars", not "$45bn").
    - Target 8,000–14,000 words ≈ 45–90 min of audio.
    - Structure: cold open + headline rundown → one deep segment per major story → quick hits → sign-off.
@@ -73,7 +73,7 @@ On request (and later daily): produce a two-host commute podcast from recent sou
 
 `scripts/` holds the automation (see `scripts/SETUP.md` for one-time setup and the daily sequence):
 
-- `fetch_articles.py` — drives Firefox (dedicated `news-automation` profile so the user's content-access extensions run) over each source in `scripts/config.json` (initially the FT AI page), extracts articles with Readability, writes clipper-style markdown to `raw/`. Dedupe state in `scripts/state/seen.json`. Flags: `--dry-run`, `--limit N`, `--headless`.
+- `fetch_articles.py` — drives Firefox (dedicated `news-automation` profile so the user's content-access extensions run) over each source in `scripts/config.json` (initially the FT AI page), extracts articles with Readability, writes clipper-style markdown to `raw/`. Dedupe state in `scripts/state/seen.json`. Articles that still read as paywalled fall back to an archive.today snapshot in a second tab; archive.today's security check is **not** automated — the run pauses and prompts the human to tick the box (once per run, usually), so this stage needs a visible browser. Flags: `--dry-run`, `--limit N`, `--headless`, `--no-archive`.
 - `make_audio.py` — renders a podcast script to mp3 via the local Chatterbox TTS server (`http://localhost:8090`, OpenAI-compatible `/v1/audio/speech`), one voice per host, ffmpeg concat. Resumable via chunk cache.
 - `config.json` — sources, paths, Firefox profile, TTS voices. `podcast/` — scripts + mp3s.
 

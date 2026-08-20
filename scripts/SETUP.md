@@ -33,8 +33,26 @@ across chunks — leave them.
 3. Claude: Podcast workflow → `podcast/YYYY-MM-DD script.md`
 4. `uv run scripts/make_audio.py "podcast/YYYY-MM-DD script.md"` → `podcast/YYYY-MM-DD.mp3`
 
+## Paywalled articles: the archive.today fallback
+
+When Readability still sees a paywall/blocked banner after `article_timeout_s`, the run opens
+`archive.today/newest/<article url>` in a second tab (reusing whichever mirror host the bypass
+banner links to) and extracts from the snapshot instead. Files written this way get
+`archive_url:` and `via: archive.today` in their frontmatter; `seen.json` records `via`.
+
+**The security check is yours to click.** archive.today gates some sessions behind a reCAPTCHA.
+The script detects it, beeps, prints a prompt, and waits (`archive.captcha_wait_s`, default 180s)
+for you to tick the box in the Firefox window it already has open — it never answers one itself.
+Solving it once normally covers the rest of the run, since the cookie lands in the
+`news-automation` profile. Because of this the archive stage is skipped under `--headless`.
+
+Articles with no snapshot are reported (`no archived snapshot for this article`) and counted as
+failures, same as before. Tune under `archive` in `config.json`; `--no-archive` disables the whole
+fallback for a run.
+
 ## Testing commands
 
 - `uv run scripts/fetch_articles.py --dry-run` — list new article links only
 - `uv run scripts/fetch_articles.py --limit 3` — small test batch
+- `uv run scripts/fetch_articles.py --limit 1 --no-archive` — direct extraction only (no archive tab)
 - `uv run scripts/make_audio.py <script.md>` — resumable; re-run after a crash and it continues

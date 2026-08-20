@@ -5,8 +5,8 @@ updated: 2026-08-12
 published: 2026-08-10
 outlet: Financial Times
 url: https://www.ft.com/content/a0a07cce-6d19-4b1e-a73b-9855a06ba7b3
-raw: "raw/2026-08-10 Just how big is the hidden leverage of AI hyperscalers.md"
-relevance:
+raw: raw/2026-08-10 Just how big is the hidden leverage of AI hyperscalers.md
+relevance: "4"
 tags:
   - ai
   - finance

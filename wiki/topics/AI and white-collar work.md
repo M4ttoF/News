@@ -1,7 +1,7 @@
 ---
 type: topic
 created: 2026-08-06
-updated: 2026-08-12
+updated: 2026-08-19
 tags: [ai, work, economy]
 ---
 
@@ -10,6 +10,9 @@ tags: [ai, work, economy]
 Standing question: which knowledge professions AI actually displaces, which adapt, and how workers signal in the transition. Current evidence in this wiki:
 
 ## Displacement pressure
+
+- **The layoff-attribution problem** (2026-08-19): 180k+ job losses "linked to AI" since May 2023, but the sceptical case is strong — overclaiming incentives, no macro signal (US claims at 1969 lows), AI-citing firms underperform the Nasdaq ~10% post-announcement. Real effects concentrate in entry-level hiring collapse, customer service, and **hiring suppression rather than firing** (postings -12.6% y/y UK) ([[2026-08-19 Is AI really responsible for recent job cuts]]).
+- **Recruitment's signal collapse** (2026-08-20): 87% of UK recruiters see AI in half of applications; "when every application is polished, polish tells you nothing"; the market reprices toward costly signals — referrals and recommendation letters — at a diversity cost ([[2026-08-20 Why recruiting is going retro in the age of AI]]). Same cost-shifting shape as the letting-agent and bug-bounty cases below.
 
 - **Strategy consulting**: analytic work (research, pattern-spotting, deck-making) is commoditized by LLMs; the surviving product is change-orchestration process, not intelligence. Industry expected to shrink; fees shifting from per-diem to outcomes ([[2026-08-06 Who needs consultants in the age of AI]]).
 - Garicano's information-problem argument for why some advisory work resists AI: the data needed to plan transformations is tacit and only surfaces through human planning struggle ([[2026-08-06 Who needs consultants in the age of AI]]).

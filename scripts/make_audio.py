@@ -23,6 +23,12 @@ from pathlib import Path
 
 import requests
 
+# Windows consoles often default to a legacy codepage (e.g. cp932) that can't
+# print em-dashes in progress lines; never let logging kill a render.
+if sys.stdout.encoding and sys.stdout.encoding.lower() not in ("utf-8", "utf8"):
+    sys.stdout.reconfigure(errors="replace")
+    sys.stderr.reconfigure(errors="replace")
+
 SCRIPT_DIR = Path(__file__).resolve().parent
 CONFIG_PATH = SCRIPT_DIR / "config.json"
 

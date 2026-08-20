@@ -5,8 +5,8 @@ updated: 2026-08-12
 published: 2026-08-06
 outlet: Financial Times
 url: https://www.ft.com/content/8a3c87ca-53e0-4ce0-9c9d-c1f9c461f6b0
-raw: "raw/2026-08-06 Europe must create an AI money-mobilisation machine.md"
-relevance:
+raw: raw/2026-08-06 Europe must create an AI money-mobilisation machine.md
+relevance: "4"
 tags:
   - ai
   - europe

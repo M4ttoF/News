@@ -1,7 +1,7 @@
 ---
 type: storyline
 created: 2026-08-06
-updated: 2026-08-06
+updated: 2026-08-19
 tags: [ai, chips, startups]
 ---
 
@@ -10,6 +10,8 @@ tags: [ai, chips, startups]
 **Where this stands:** Private capital keeps pouring into startups betting that specialized inference silicon beats Nvidia's general-purpose GPUs on cost — even as public chip stocks sell off on AI-capex anxiety. Four significant raises in 2026 so far, at fast-inflating valuations; none of these companies has shipped product at scale yet.
 
 ## Developments
+
+- **2026-08-19** — The most credible Nvidia challenge remains hyperscaler custom silicon: Google expands its TPU supply chain to **Marvell** ($12.2bn share warrant vesting on co-developed revenue), diversifying beyond Broadcom (-5% on the news), as Google starts selling TPUs externally — including ~$150bn of chips to Anthropic ([[2026-08-19 Google strikes $12bn AI chip deal with Marvell]]). Photonic interconnect (Marvell's Celestial AI; Nvidia's $2bn Marvell stake) confirms the Olix thesis that interconnect is the next bottleneck.
 
 - **2026-08-03** — **Olix** (London, founded 2024, James Dacombe, 25): $312mn led by Fundomo with Arm, Hudson River Trading, Reed Hastings; $3.3bn valuation, 3× February's. Photonic interconnect as differentiator; sidesteps scarce HBM/advanced packaging; tape-out late 2026 ([[2026-08-03 Olix triples valuation to 3.3bn]]).
 - **2026-07** — Etched: $300mn at $10.3bn (Sequoia, a16z); SambaNova: $1bn at $11bn (General Atlantic) ([[2026-08-03 Olix triples valuation to 3.3bn]]).

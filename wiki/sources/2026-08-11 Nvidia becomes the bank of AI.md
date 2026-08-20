@@ -5,8 +5,8 @@ updated: 2026-08-12
 published: 2026-08-11
 outlet: Financial Times
 url: https://www.ft.com/content/4c93c894-04b8-49dc-be41-98ae79f540f8
-raw: "raw/2026-08-11 Nvidia becomes the bank of AI.md"
-relevance:
+raw: raw/2026-08-11 Nvidia becomes the bank of AI.md
+relevance: "3"
 tags:
   - ai
   - finance

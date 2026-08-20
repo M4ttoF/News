@@ -63,7 +63,7 @@ Format rules that have burned us (all because the TTS reads text literally):
 - `A:` / `B:` dialogue lines only; `---` between segments; **no headings** inside dialogue.
 - **No bracketed stage directions** — chatterbox reads `[laughs]` aloud. Write the reaction into the words ("Ha! That's the whole thing, isn't it."). (The parked S2/fish backend *does* interpret `[tags]` — that's a backend difference to reconcile if switching.)
 - Spell out numbers, currencies, abbreviations as speech: "forty-five billion dollars", "K K R", "S and P", "Gov dot U K".
-- Personas: A (Resnene) anchors — energetic, drives transitions. B (Bee) is drier — analysis, skepticism, the deflating fact. Both sarcastic without undercutting facts. Give them real disagreements and let one correct the other.
+- Personas: A is named **Nene** (voice Resnene) — anchors: energetic, drives transitions. B is named **Bee** (voice Bee) — drier: analysis, skepticism, the deflating fact. In dialogue text spell Nene's name **"Naynay"** (TTS mispronounces "Nene"); metadata and page text keep "Nene". Both sarcastic without undercutting facts. Give them real disagreements and let one correct the other.
 - Length: 8,000–14,000 words. Empirical rate: **~178 words/min** (13,600 words → 76 min), so 8k ≈ 45 min, 14k ≈ 80 min.
 - Structure: cold open + headline rundown → one deep segment per major story → quick hits → sign-off. Cross-reference earlier episodes when a story develops ("last week we said X — that undersold it").
 

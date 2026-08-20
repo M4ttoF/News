@@ -5,8 +5,8 @@ updated: 2026-08-12
 published: 2026-08-10
 outlet: Financial Times
 url: https://www.ft.com/content/28b389f5-5f74-4993-a9b3-edd0c500d49a
-raw: "raw/2026-08-10 Senior UK detective under investigation for alleged misuse of AI.md"
-relevance:
+raw: raw/2026-08-10 Senior UK detective under investigation for alleged misuse of AI.md
+relevance: "3"
 tags:
   - ai
   - uk

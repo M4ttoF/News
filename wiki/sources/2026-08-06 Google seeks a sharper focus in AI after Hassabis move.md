@@ -5,8 +5,8 @@ updated: 2026-08-12
 published: 2026-08-06
 outlet: Financial Times
 url: https://www.ft.com/content/f860d189-7def-4c7a-8ce3-4e96b3371d1f
-raw: "raw/2026-08-06 Google seeks a sharper focus in AI after Hassabis move.md"
-relevance:
+raw: raw/2026-08-06 Google seeks a sharper focus in AI after Hassabis move.md
+relevance: "3"
 tags:
   - ai
   - big-tech

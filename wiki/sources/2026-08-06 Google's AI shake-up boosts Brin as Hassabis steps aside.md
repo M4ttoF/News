@@ -5,8 +5,8 @@ updated: 2026-08-12
 published: 2026-08-06
 outlet: Financial Times
 url: https://www.ft.com/content/1453e9c2-4922-482f-8720-0bafd7e07df7
-raw: "raw/2026-08-06 Google’s AI shake-up boosts Brin as DeepMind’s Hassabis steps aside.md"
-relevance:
+raw: raw/2026-08-06 Google’s AI shake-up boosts Brin as DeepMind’s Hassabis steps aside.md
+relevance: "3"
 tags:
   - ai
   - big-tech

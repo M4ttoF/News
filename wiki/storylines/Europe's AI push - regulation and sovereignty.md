@@ -1,7 +1,7 @@
 ---
 type: storyline
 created: 2026-08-06
-updated: 2026-08-12
+updated: 2026-08-19
 tags: [ai, europe, regulation, geopolitics, finance]
 ---
 
@@ -10,6 +10,8 @@ tags: [ai, europe, regulation, geopolitics, finance]
 **Where this stands:** Europe is simultaneously enforcing the world's first consumer AI transparency rules (AI Act labels live since Aug 2) and waking up to AI as a sovereignty problem — dependent on US labs whose access can be politically conditioned, with an autumn European Council summit meant to finally set a collective course. The newest framing sharpens the diagnosis: the binding constraint is **capital, not regulation or talent**. Draghi's €800bn annual investment shortfall is largely unaddressed, only 60 of his 383 recommendations are fully implemented, and one widely-read essay argues Europe's whole response is 10 to 100 times too small.
 
 ## Developments
+
+- **2026-08-18** — **The dependency fear became a formal government workstream**: the UK Cabinet Office ordered an urgent assessment of the economic/security hit if Britons lose frontier-model access, triggered by the June Fable 5 episode (Trump directive → Anthropic pulled the model globally → relaunch). Ciaran Martin: the US could "manipulate and leverage the whole AI stack" to force compliance. UK counterweights: £1.1bn hardware plan, £500mn sovereign AI fund, cabinet AI minister ([[2026-08-18 UK examines economic hit from loss of access to frontier AI models]]).
 
 - **2026-08-06** — The capital-mobilisation argument. Europe pioneered the research (Schmidhuber, Hinton, [[Demis Hassabis]]) and lost the deployment, repeating the pattern of the World Wide Web, MP3, lithium-ion batteries and high-efficiency solar. The essay *"Europe 2031: What Getting AI Wrong Means for Us"* warns Europe risks losing "the ability to shape its own future" — sidelined politically and economically, unable to defend its values or sustain its welfare states — and calls the current response **10 to 100× too small**. Only **60 of Draghi's 383** competitiveness recommendations are fully implemented (European Policy Innovation Council, July). Bright spots: sovereign-capability focus in AI-enabled defence tech, publicly backed scale-up funds, an industrial base suited to robotics and physical AI. Peter Sarlin (sold Silo AI for $665mn) argues Europe should win by **applying** AI sector-by-sector, where the customer relationship and data flywheel live, and bets on quantum processing units as the next platform. Meredith Whittaker's angle: public distrust is the real deployment constraint, so a **democratically accountable AI governance regime** could be a European advantage rather than a handicap ([[2026-08-06 Europe must create an AI money-mobilisation machine]]).
 

@@ -5,8 +5,8 @@ updated: 2026-08-12
 published: 2026-08-10
 outlet: Financial Times
 url: https://www.ft.com/content/1b3493a5-2b0b-4a3e-86e0-76b7f2de373a
-raw: "raw/2026-08-10 Boehly’s investment group rolls out AI across portfolio after taking stake in st.md"
-relevance:
+raw: raw/2026-08-10 Boehly’s investment group rolls out AI across portfolio after taking stake in st.md
+relevance: "2"
 tags:
   - ai
   - finance

@@ -5,8 +5,8 @@ updated: 2026-08-12
 published: 2026-08-11
 outlet: Financial Times
 url: https://www.ft.com/content/a87d7d98-92b8-48cc-8b8d-868bb1f79034
-raw: "raw/2026-08-11 UK letting agents under pressure from AI-assisted tenant complaints.md"
-relevance:
+raw: raw/2026-08-11 UK letting agents under pressure from AI-assisted tenant complaints.md
+relevance: "3"
 tags:
   - ai
   - uk

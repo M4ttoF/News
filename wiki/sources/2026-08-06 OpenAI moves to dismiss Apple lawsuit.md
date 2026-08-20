@@ -6,7 +6,7 @@ published: 2026-08-06
 outlet: Financial Times
 url: https://www.ft.com/content/d9e9cbbe-8443-4c10-821a-1834e4965236
 raw: raw/2026-08-06 OpenAI says Apple’s trade secrets lawsuit aims to stop employees leaving.md
-relevance:
+relevance: "5"
 tags:
   - ai
   - legal
